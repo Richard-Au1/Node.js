@@ -1,11 +1,13 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markdown = require('utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+
+//Create a function to initialize app
 function init() {
     inquirer
+        // Create an array of questions for user input
         .prompt([
             {
                 type: 'input',
@@ -20,12 +22,13 @@ function init() {
             {
                 type: 'input',
                 title: 'Installion Instructions',
-                message: 'Please type if your application has installation instructions.',
+                message: 'Please type in the command you want to use to run the readme.',
+                default: 'npm test'
             },
             {
                 type: 'input',
                 title: 'Usage Information',
-                message: 'Please input the usage of your application.',
+                message: 'Please input the usage of the application.',
             },
             {
                 type: 'input',
@@ -41,7 +44,8 @@ function init() {
                 type: 'list',
                 title: 'License',
                 message: 'Which license did you use?',
-                choices: 'MIT, '
+                choices: 'MIT, ',
+                default: 'MIT',
             },
             {
                 type: 'input',
@@ -52,13 +56,21 @@ function init() {
                 type: 'input',
                 title: 'Email Address',
                 message: 'Please enter your email address.',
-            }
+            },
         ])
+
+        // TODO: Create a function to write README file
+        .then((data) => {
+        let readmeContent = markdown(data)
+        
+        fs.writeFile('README.md', readmeContent, (err) => {
+            if (err) {
+                console.log(err);
+            }else{
+                console.log('Generating your README File...');
+            }
+        });
+    });
 };
-
-// TODO: Create a function to write README file
-
-// TODO: Create a function to initialize app
-
-// Function call to initialize app
+//Function call to initialize app
 init();
