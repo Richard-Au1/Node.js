@@ -1,13 +1,17 @@
 {
-  "name": "static-site",
+  "name": "readmecreator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generates a ReadMe file",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Richard-Au1/Node.js"
+  },
+  "author": "Richard Au",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.4"
   }
