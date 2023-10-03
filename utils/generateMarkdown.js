@@ -73,9 +73,9 @@ ${data.description}
   
 `## Installation
 To install necessary dependencies, run the following command:
-\`\`\`
+
 ${data.installation}
-\`\`\`
+
 `;
   // Append the user's answer for the "Usage" section
   readmeContent += `
