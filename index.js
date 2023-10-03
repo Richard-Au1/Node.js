@@ -44,8 +44,8 @@ function init() {
                 type: 'list',
                 title: 'License',
                 message: 'Which license did you use?',
-                choices: 'MIT, ',
-                default: 'MIT',
+                choices: 'MIT, Apache 2.0, GNU 3.0',
+                default: 'None',
             },
             {
                 type: 'input',
