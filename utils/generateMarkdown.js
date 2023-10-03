@@ -71,7 +71,13 @@ ${data.description}
 - [Tests](#tests)
 - [Questions](#questions)`;
   
-`## Installation
+
+
+readmeContent += 
+`
+
+\n\n
+## Installation
 To install necessary dependencies, run the following command:
 
 ${data.installation}

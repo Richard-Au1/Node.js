@@ -60,7 +60,7 @@ function init() {
             {
                 type: 'input',
                 name: 'contributing',
-                message: 'What does the user need to know about contributing to the repo?',
+                message: 'How can the user contribute to the repo?',
             },
             
         ])
