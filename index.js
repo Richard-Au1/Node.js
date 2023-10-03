@@ -1,7 +1,7 @@
 //Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('utils/generateMarkdown');
+const markdown = require('./utils/generateMarkdown');
 
 
 //Create a function to initialize app
@@ -45,7 +45,7 @@ function init() {
                 title: 'License',
                 message: 'Which license did you use?',
                 choices: 'MIT, Apache 2.0, GNU 3.0',
-                default: 'None',
+                default: 'MIT',
             },
             {
                 type: 'input',
