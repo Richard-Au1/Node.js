@@ -11,50 +11,49 @@ function init() {
         .prompt([
             {
                 type: 'input',
-                title: 'Title',
+                name: 'Title',
                 message: 'What is the title of your project?',
             },
             {
                 type: 'input',
-                title: 'Description',
+                name: 'Description',
                 message: 'Type in your description for your ReadMe file.',
             },
             {
                 type: 'input',
-                title: 'Installion Instructions',
+                name: 'Installion Instructions',
                 message: 'Please type in the command you want to use to run the readme.',
                 default: 'npm test'
             },
             {
                 type: 'input',
-                title: 'Usage Information',
+                name: 'Usage',
                 message: 'Please input the usage of the application.',
             },
             {
                 type: 'input',
-                title: 'Contribution guidelines',
+                name: 'Contribution',
                 message: 'Please type how a user can contributes to your application.',
             },
             {
                 type: 'input',
-                title: 'Test Intructions',
+                name: 'Test',
                 message: 'Please type how to test the application.',
             },
             {
                 type: 'list',
-                title: 'License',
+                name: 'License',
                 message: 'Which license did you use?',
-                choices: 'MIT, Apache 2.0, GNU 3.0',
-                default: 'MIT',
+                choices: ['Apache 2.0', 'GNU 3.0', 'MIT'],
             },
             {
                 type: 'input',
-                title: 'Github Username',
+                name: 'Github Username',
                 message: 'Please enter your Github username.',
             },
             {
                 type: 'input',
-                title: 'Email Address',
+                name: 'Email Address',
                 message: 'Please enter your email address.',
             },
         ])
